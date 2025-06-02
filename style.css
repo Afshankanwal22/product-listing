@@ -12,11 +12,12 @@
 
 .custom-navbar {
   background: linear-gradient(90deg, #2a9d8f, #21867a);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-wrap: nowrap;
    align-items: center;
-  /* padding: 0 1rem; */
+  justify-content: space-between;
+  
+  z-index: 1100;
 
 }
 .custom-navbar .navbar-brand {
@@ -66,6 +67,15 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   
 }
+
+
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
     .products-section {
       padding: 2rem;
@@ -194,10 +204,32 @@
   font-size: 0.9rem;
   color: #ddd;
 }
+h1{
 
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2a9d8f, #21867a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+  padding-top: 20px;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
  header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   background: linear-gradient(90deg, #2a9d8f, #21867a);
   -webkit-background-clip: text;
@@ -503,5 +535,21 @@ body {
 
 .footer-content ul.footer-nav li a:hover {
   color: #1c3c72;
+}
+
+.navbar-collapse {
+  position: absolute; 
+  top: 56px; 
+  left: 0;  
+  width: 100%; 
+  background-color: #21867a; 
+  z-index: 1050;
+  
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    right: auto !important;
+  }
 }
 

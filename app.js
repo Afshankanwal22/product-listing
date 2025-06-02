@@ -28,19 +28,6 @@
       productsGrid.innerHTML = html;
     }
 
-    // fetch('https://dummyjson.com/products')
-    //   .then(res => {
-    //     if (!res.ok) throw new Error('Failed to fetch products');
-    //     return res.json();
-    //   })
-    //   .then(data => {
-    //     loader.style.display = 'none';
-    //     renderProducts(data.products);
-    //   })
-    //   .catch(err => {
-    //     loader.textContent = `Error loading products: ${err.message}`;
-    //   });
-
     fetch('https://dummyjson.com/products')
   .then(res => res.json())
   .then(data => renderProducts(data.products))
