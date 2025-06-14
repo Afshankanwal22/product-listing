@@ -251,28 +251,7 @@ h1{
     transform: translateY(0);
   }
  }
- /*header h1 {
-  margin: 0;
-  font-size: 3.5rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #2a9d8f, #21867a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  animation: slideIn 1s ease forwards;
-  opacity: 0;
-}
 
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
 
 
     main {
@@ -623,15 +602,14 @@ margin: 10px 10px;
   text-decoration: none;
 }
 
-/* Ensure button is visible on small screens */
 .navbar-toggler {
   background: none;
   border: none;
   cursor: pointer;
-  display: block; /* force it visible on mobile */
+  display: block;
 }
 
-/* Hamburger Icon Styling */
+
 .navbar-toggler-icon {
   width: 25px;
   height: 3px;
